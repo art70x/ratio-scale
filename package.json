@@ -1,0 +1,48 @@
+{
+  "name": "ratio-scale",
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript utility for calculating values from ratios.",
+  "homepage": "https://github.com/art70x/ratio-scale#readme",
+  "bugs": {
+    "url": "https://github.com/art70x/ratio-scale/issues"
+  },
+  "license": "MIT",
+  "author": "Art70x",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/art70x/ratio-scale.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "lint": "vp lint . --fix",
+    "format": "vp fmt --write .",
+    "prepublishOnly": "vp run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  }
+}
